@@ -45,7 +45,7 @@ function kopyala(marketteNeVarsa) {
   let orijinalTatlarKopyala = [...marketteNeVarsa];
   return orijinalTatlarKopyala;
 }
-console.log("Elif Alışverişte", kopyala(orijinalTatlar));
+console.log("Emine Alışverişte", kopyala(orijinalTatlar));
 
 
 
@@ -184,7 +184,7 @@ function ismeGoreFiltrele(marketRafi, filtrelenecek) {
   return sepet;
 }
 //console.log("yeniDizi", yeniDizi);
-ismeGoreFiltrele(orijinalTatlar, "dı");
+ismeGoreFiltrele(orijinalTatlar, "Çikolata");
 
 
 
