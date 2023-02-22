@@ -40,9 +40,15 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(marketteNeVarsa) {
+  /kod buraya/
+  let orijinalTatlarKopyala = [...marketteNeVarsa];
+  return orijinalTatlarKopyala;
 }
+console.log("Elif Alışverişte", kopyala(orijinalTatlar));
+
+
+
 
 
 /* Görev 2:
@@ -55,10 +61,13 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 Örneğin: dizi25Cesit(orijinalTatlar) kodunuz düzgün çalışıyorsa true değerini döndürür.
 */
 
+function dizi25Cesitmi(orijinalTatlar){
+  let diziUzunluk = (orijinalTatlar.length === 25)
+  return diziUzunluk;
+  }
+ console.log(dizi25Cesitmi(orijinalTatlar));
+ 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
-}
 
 
 /* Görev 3:
@@ -74,8 +83,10 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
+function cesitEkle(tatlar){
+  let ekle1=  "Kakule";
+  tatlar.unshift(ekle1);
+  return tatlar;
 }
 
 
@@ -92,8 +103,9 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(tatlar){
+  tatlar.pop();
+  return tatlar;
 }
 
 
@@ -108,9 +120,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
+function indekstekiCesitiGetir(tatlar, sayi1){
+  let cesit = tatlar [sayi1];
+  return (cesit);
 }
+indekstekiCesitiGetir(orijinalTatlar, 4);
 
 
 /* Görev 6:
@@ -128,9 +142,12 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(tatlar, lezzet){
+  let cıkan = tatlar.indexOf(lezzet);
+  tatlar.splice(cıkan, 1);
+  return(tatlar);
 }
+ismeGoreCesitCikar(orijinalTatlar, "Fındık");
 
 
 /* Görev 7:
@@ -154,9 +171,20 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(marketRafi, filtrelenecek) {
+  /kod buraya/
+  let sepet = [];
+  for (let i = 0; i < marketRafi.length; i++) {
+    let elimdekiAbur = marketRafi[i];
+    if (elimdekiAbur.includes(filtrelenecek)) {
+      sepet.push(elimdekiAbur);
+    }
+  }
+  console.log("Sepet", sepet);
+  return sepet;
 }
+//console.log("yeniDizi", yeniDizi);
+ismeGoreFiltrele(orijinalTatlar, "dı");
 
 
 
